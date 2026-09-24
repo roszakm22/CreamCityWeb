@@ -29,9 +29,9 @@ function AgencyHome() {
         <a className="agency-wordmark" href="#top">
           Cream City Web Co.
         </a>
-        <span className="agency-header-note">
-          Websites for local businesses
-        </span>
+        <nav className="agency-nav" aria-label="Main navigation">
+          <a href="/concepts">Concepts</a>
+        </nav>
       </header>
 
       <main className="agency-main" id="top">

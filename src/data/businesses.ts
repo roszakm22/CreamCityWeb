@@ -118,7 +118,7 @@ export const timeToCutBarbershop: BusinessConfig = {
   ],
   conceptLabel: "Unofficial concept",
   conceptNotice:
-    "Unofficial concept — a design mockup by Cream City Web Co. We are not affiliated with Time to Cut Barbershop.",
+    "Pre-production design concept by Cream City Web Co. Not affiliated with or approved by Time to Cut Barbershop. Details and images are illustrative and may not reflect the business.",
   booking: {
     label: "Book online",
     url: "https://app.acuityscheduling.com/schedule.php?owner=28062419&ref=sched_block&isInConfig=false&calendarID=7967999",
@@ -176,5 +176,5 @@ export const mrCleanLaundromat: BusinessConfig = {
   ],
   conceptLabel: "Unofficial concept",
   conceptNotice:
-    "Unofficial concept — a design mockup by Cream City Web Co. We are not affiliated with MR CLEAN LAUNDROMAT.",
+    "Pre-production design concept by Cream City Web Co. Not affiliated with or approved by MR CLEAN LAUNDROMAT. Details and images are illustrative and may not reflect the business.",
 };
