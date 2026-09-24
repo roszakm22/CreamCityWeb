@@ -101,17 +101,17 @@ export const timeToCutBarbershop: BusinessConfig = {
   ],
   gallery: [
     {
-      src: "/images/barbershop-clippers.png",
+      src: "/images/barbershop-clippers.webp",
       alt: "Generic illustrative image of barber clippers on a counter",
       caption: "Generic visual concept — not a photo of this shop.",
     },
     {
-      src: "/images/barbershop-chair.png",
+      src: "/images/barbershop-chair.webp",
       alt: "Generic illustrative image of an empty barber chair",
       caption: "Generic visual concept — not a photo of this shop.",
     },
     {
-      src: "/images/barbershop-storefront.png",
+      src: "/images/barbershop-storefront.webp",
       alt: "Generic illustrative image with a barber pole by a window",
       caption: "Generic visual concept — not a photo of this shop.",
     },
@@ -159,17 +159,17 @@ export const mrCleanLaundromat: BusinessConfig = {
   services: [],
   gallery: [
     {
-      src: "/images/laundromat-interior.png",
+      src: "/images/laundromat-interior.webp",
       alt: "Generic illustrative image of a bright laundromat interior",
       caption: "Generic illustration — not a photo of MR CLEAN LAUNDROMAT.",
     },
     {
-      src: "/images/laundromat-towels.png",
+      src: "/images/laundromat-towels.webp",
       alt: "Generic illustrative image of neatly folded towels",
       caption: "Generic illustration — not a photo of MR CLEAN LAUNDROMAT.",
     },
     {
-      src: "/images/laundromat-storefront.png",
+      src: "/images/laundromat-storefront.webp",
       alt: "Generic illustrative image of a laundromat storefront",
       caption: "Generic illustration — not a photo of MR CLEAN LAUNDROMAT.",
     },

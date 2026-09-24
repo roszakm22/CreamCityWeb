@@ -34,7 +34,15 @@ export default defineConfig({
     tsConfigPaths({
       projects: ["./tsconfig.json"],
     }),
-    tanstackStart(),
+    tanstackStart({
+      // Emit route HTML into dist/client so Cloudflare Pages can serve the site
+      // as plain files. The server bundle remains for the private preview flow.
+      prerender: {
+        enabled: true,
+        crawlLinks: true,
+        failOnError: true,
+      },
+    }),
     viteReact(),
   ],
 });
