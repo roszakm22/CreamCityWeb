@@ -28,6 +28,10 @@ export type BusinessConfig = {
   gallery: BusinessGalleryItem[];
   conceptLabel: string;
   conceptNotice: string;
+  booking?: {
+    label: string;
+    url: string;
+  };
 };
 
 export const timeToCutBarbershop: BusinessConfig = {
@@ -86,4 +90,8 @@ export const timeToCutBarbershop: BusinessConfig = {
   conceptLabel: "Unofficial concept",
   conceptNotice:
     "Unofficial concept — a design mockup by Cream City Web Co. We are not affiliated with Time to Cut Barbershop.",
+  booking: {
+    label: "Book online",
+    url: "https://app.acuityscheduling.com/schedule.php?owner=28062419&ref=sched_block&isInConfig=false&calendarID=7967999",
+  },
 };

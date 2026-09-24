@@ -100,6 +100,20 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
                 Get directions
                 <ArrowUpRightIcon />
               </a>
+              {business.booking ? (
+                <div className="booking-action">
+                  <a
+                    className="button button-booking"
+                    href={business.booking.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {business.booking.label}
+                    <ArrowUpRightIcon />
+                  </a>
+                  <p>Booking is handled by the shop&apos;s existing provider.</p>
+                </div>
+              ) : null}
             </div>
             <p className="walk-in-note">
               <span className="pulse-dot" aria-hidden="true" />
