@@ -969,15 +969,21 @@ h2 em {
   font-size: 13px;
 }
 
-.contact-placeholder {
+.contact-email {
   display: inline-block;
   margin-top: 25px;
   padding: 13px 17px;
-  border: 1px dashed var(--copper);
-  color: var(--copper);
-  font-size: 11px;
+  border: 1px solid var(--copper);
+  background: var(--copper);
+  color: #fff9f0;
+  font-size: 13px;
   font-weight: 800;
-  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.contact-email:hover,
+.contact-email:focus-visible {
+  background: #a85636;
 }
 
 .agency-footer {

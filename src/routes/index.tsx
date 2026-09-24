@@ -100,10 +100,10 @@ function AgencyHome() {
             <br />
             easy to find.
           </h2>
-          <p>Owner contact details will be added here after approval.</p>
-          <span className="contact-placeholder">
-            OWNER CONTACT DETAILS — PLACEHOLDER
-          </span>
+          <p>Tell us about your business and what you need people to find.</p>
+          <a className="contact-email" href="mailto:roszakm37@gmail.com">
+            roszakm37@gmail.com
+          </a>
         </section>
       </main>
 
