@@ -1,5 +1,101 @@
 @import "tailwindcss";
 
+/* MR CLEAN's concept has its own visual system and layout. */
+.laundry-page {
+  --laundry-ink: #163547;
+  --laundry-blue: #175f8a;
+  --laundry-yellow: #f4c947;
+  --laundry-paper: #f7f6ed;
+  overflow: hidden;
+  background: var(--laundry-paper);
+  color: var(--laundry-ink);
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+.laundry-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 12px 24px;
+  background: #163547;
+  color: white;
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+.laundry-disclaimer strong { flex: none; text-transform: uppercase; letter-spacing: .12em; }
+.laundry-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  max-width: 1440px;
+  margin: auto;
+  padding: 22px clamp(24px, 5vw, 80px);
+}
+.laundry-brand { display: flex; align-items: center; gap: 12px; font-size: 22px; font-weight: 900; letter-spacing: -.065em; line-height: .85; text-decoration: none; }
+.laundry-brand small { display: block; margin-top: 5px; font-size: 10px; letter-spacing: .24em; }
+.laundry-brand-symbol { display: grid; width: 46px; height: 46px; place-items: center; border-radius: 50%; background: var(--laundry-blue); color: white; font-size: 33px; font-weight: 400; }
+.laundry-header nav { display: flex; gap: 32px; font-size: 13px; font-weight: 700; }
+.laundry-header nav a { text-decoration: none; }
+.laundry-header-call { padding: 12px 20px; border: 2px solid currentColor; border-radius: 30px; font-size: 13px; font-weight: 800; text-decoration: none; }
+.laundry-hero { position: relative; display: grid; grid-template-columns: 48% 52%; min-height: 640px; background: #dceded; }
+.laundry-hero-copy { position: relative; z-index: 1; display: flex; flex-direction: column; align-items: flex-start; justify-content: center; padding: 80px 5vw 100px max(5vw, calc((100vw - 1280px) / 2)); }
+.laundry-kicker { font-size: 11px; font-weight: 900; letter-spacing: .18em; text-transform: uppercase; }
+.laundry-hero h1 { margin: 28px 0; font-size: clamp(72px, 8vw, 148px); font-weight: 900; letter-spacing: -.095em; line-height: .82; }
+.laundry-hero h1 span { color: var(--laundry-blue); }
+.laundry-hero-copy > p:not(.laundry-kicker) { max-width: 420px; font-size: 17px; line-height: 1.65; }
+.laundry-button { display: flex; justify-content: space-between; gap: 50px; margin-top: 25px; padding: 18px 23px; border-radius: 40px; background: var(--laundry-yellow); font-size: 14px; font-weight: 900; text-decoration: none; }
+.laundry-hero-visual { position: relative; min-height: 640px; overflow: hidden; }
+.laundry-hero-visual img { width: 100%; height: 100%; object-fit: cover; }
+.laundry-hero-visual > span { position: absolute; right: 20px; bottom: 20px; padding: 9px 12px; background: var(--laundry-paper); font-size: 10px; font-weight: 900; letter-spacing: .08em; }
+.laundry-hero-index { position: absolute; bottom: 36px; left: 5vw; font-size: 12px; font-weight: 900; letter-spacing: .2em; }
+.laundry-details { display: grid; grid-template-columns: 34% 1fr; gap: 5%; max-width: 1360px; margin: auto; padding: 130px clamp(24px, 5vw, 80px); }
+.laundry-section-heading h2, .laundry-visuals h2 { margin: 20px 0; font-size: clamp(46px, 5vw, 80px); font-weight: 900; letter-spacing: -.075em; line-height: .95; }
+.laundry-page h2 i { color: var(--laundry-blue); font-family: Georgia, serif; font-weight: 400; }
+.laundry-detail-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.laundry-detail-grid article { min-height: 240px; padding: 25px; border-top: 3px solid var(--laundry-ink); background: white; }
+.laundry-detail-number { color: var(--laundry-blue); font-size: 11px; font-weight: 900; letter-spacing: .14em; }
+.laundry-detail-grid h3 { margin: 35px 0 10px; font-size: 24px; letter-spacing: -.04em; }
+.laundry-detail-grid p { margin: 0 0 12px; line-height: 1.5; }
+.laundry-detail-grid small { color: #52666e; line-height: 1.5; }
+.laundry-detail-grid a { font-size: 13px; font-weight: 900; text-underline-offset: 4px; }
+.laundry-visuals { padding: 110px clamp(24px, 5vw, 80px) 130px; background: #e1eeed; }
+.laundry-visuals-heading { max-width: 1250px; margin: auto; }
+.laundry-visuals-heading p { max-width: 540px; line-height: 1.6; }
+.laundry-photo-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 1250px; margin: 42px auto 0; }
+.laundry-photo-grid figure { margin: 0; }
+.laundry-photo-grid img { display: block; width: 100%; height: 350px; object-fit: cover; }
+.laundry-photo-grid figcaption { padding: 12px 0; font-size: 11px; }
+.laundry-end { padding: 100px 24px 110px; background: var(--laundry-blue); color: white; text-align: center; }
+.laundry-end h2 { margin: 20px auto 35px; font-size: clamp(58px, 8vw, 120px); font-weight: 900; letter-spacing: -.085em; line-height: .9; }
+.laundry-end div { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+.laundry-end a { padding: 14px 20px; border: 1px solid white; border-radius: 30px; font-weight: 800; text-decoration: none; }
+.laundry-footer { display: flex; justify-content: space-between; gap: 20px; padding: 25px 5vw; font-size: 11px; }
+.laundry-mobile-call { display: none; }
+@media (max-width: 800px) {
+  .laundry-disclaimer { display: block; }
+  .laundry-disclaimer strong { display: block; margin-bottom: 4px; }
+  .laundry-header nav { display: none; }
+  .laundry-header-call { white-space: nowrap; }
+  .laundry-hero, .laundry-details { grid-template-columns: 1fr; }
+  .laundry-hero-copy { padding: 80px 24px 65px; }
+  .laundry-hero h1 { font-size: clamp(68px, 15vw, 110px); }
+  .laundry-hero-visual { min-height: 360px; height: 48vw; }
+  .laundry-hero-index { display: none; }
+  .laundry-details { padding: 85px 24px; }
+  .laundry-footer { flex-direction: column; }
+}
+@media (max-width: 520px) {
+  .laundry-brand { font-size: 17px; }
+  .laundry-brand-symbol { width: 37px; height: 37px; font-size: 27px; }
+  .laundry-header-call { padding: 10px; font-size: 11px; }
+  .laundry-detail-grid, .laundry-photo-grid { grid-template-columns: 1fr; }
+  .laundry-photo-grid img { height: 270px; }
+  .laundry-mobile-call { position: fixed; z-index: 10; right: 12px; bottom: 12px; left: 12px; display: block; padding: 17px; border-radius: 30px; background: var(--laundry-yellow); color: var(--laundry-ink); font-weight: 900; text-align: center; text-decoration: none; box-shadow: 0 8px 24px #16354744; }
+}
+
 :root {
   --ink: #1b211e;
   --muted: #6c756d;
@@ -1187,4 +1283,62 @@ h2 em {
     align-items: flex-start;
     flex-direction: column;
   }
+}
+
+/* Time to Cut: editorial, high-contrast barbershop identity. */
+.barber-concept {
+  --ink: #f4ede0;
+  --muted: #a7a092;
+  --paper: #171817;
+  --paper-deep: #292a27;
+  --forest: #a73728;
+  --forest-deep: #161716;
+  --copper: #d85c42;
+  --line: rgba(244, 237, 224, .22);
+  --serif: Georgia, "Times New Roman", serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+.barber-concept .concept-banner { background: #a73728; color: white; }
+.barber-concept .concept-banner-mark { color: white; border-color: white; }
+.barber-concept .business-header { width: min(1440px, calc(100% - 48px)); padding: 30px 0; }
+.barber-concept .brand-mark { border-radius: 0; background: var(--copper); color: white; }
+.barber-concept .brand-name { color: var(--ink); font-family: var(--sans); font-size: 17px; font-weight: 900; text-transform: uppercase; letter-spacing: .09em; }
+.barber-concept .brand-category { color: var(--copper); letter-spacing: .25em; }
+.barber-concept .header-call { border-color: var(--copper); border-radius: 0; color: var(--ink); text-transform: uppercase; letter-spacing: .07em; }
+.barber-concept .hero-section { width: min(1440px, calc(100% - 48px)); min-height: 690px; grid-template-columns: 44% 56%; gap: 0; }
+.barber-concept .hero-copy { position: relative; z-index: 1; padding: 70px 24px 75px 0; }
+.barber-concept .hero-copy h1 { color: var(--ink); font-size: clamp(70px, 8.5vw, 150px); font-weight: 900; letter-spacing: -.09em; line-height: .85; text-transform: uppercase; }
+.barber-concept .hero-copy h1 em { color: var(--copper); font-weight: 400; text-transform: none; }
+.barber-concept .eyebrow { color: var(--copper); letter-spacing: .2em; }
+.barber-concept .hero-tagline { color: #d0c6b9; }
+.barber-concept .hero-art { min-height: 690px; border-radius: 0; }
+.barber-concept .hero-art img { filter: grayscale(.65) contrast(1.15); }
+.barber-concept .hero-art-label { background: var(--copper); color: white; }
+.barber-concept .button { border-radius: 0; text-transform: uppercase; letter-spacing: .06em; }
+.barber-concept .button-primary { background: var(--copper); color: white; }
+.barber-concept .button-secondary { color: var(--ink); border-color: var(--line); }
+.barber-concept .button-booking { background: #eee6d7; color: #171817; }
+.barber-concept .booking-action p, .barber-concept .walk-in-note { color: #d0c6b9; }
+.barber-concept .info-strip { background: var(--copper); color: white; }
+.barber-concept .info-icon { color: white; }
+.barber-concept .services-section { border-top: 1px solid var(--line); }
+.barber-concept .services-section h2, .barber-concept .gallery-section h2, .barber-concept .final-cta h2 { color: var(--ink); font-weight: 800; text-transform: uppercase; letter-spacing: -.065em; }
+.barber-concept .hours-section h2 { color: #171817; font-weight: 800; text-transform: uppercase; letter-spacing: -.065em; }
+.barber-concept .services-section h2 em, .barber-concept .gallery-section h2 em, .barber-concept .hours-section h2 em, .barber-concept .final-cta h2 em { color: var(--copper); font-weight: 400; text-transform: none; }
+.barber-concept .service-list li { border-color: var(--line); }
+.barber-concept .service-number { color: var(--copper); }
+.barber-concept .gallery-section { width: 100%; max-width: none; padding: 100px max(24px, calc((100vw - 1180px) / 2)); background: #242522; }
+.barber-concept .gallery-card img { filter: saturate(.55) contrast(1.12); }
+.barber-concept .gallery-card figcaption, .barber-concept .gallery-note { color: #c4b9aa; }
+.barber-concept .hours-card { background: #eee6d7; color: #171817; border-radius: 0; }
+.barber-concept .hours-card .eyebrow, .barber-concept .hours-card h2 em { color: #a73728; }
+.barber-concept .final-cta { border-top: 1px solid var(--line); }
+.barber-concept .business-footer { background: #101110; color: #eee6d7; }
+.barber-concept .mobile-call-bar { border-radius: 0; background: var(--copper); }
+@media (max-width: 800px) {
+  .barber-concept .hero-section { grid-template-columns: 1fr; }
+  .barber-concept .hero-copy { padding: 70px 0 50px; }
+  .barber-concept .hero-art { min-height: 390px; }
+  .barber-concept .gallery-section { padding: 80px 24px; }
 }

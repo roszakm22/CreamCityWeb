@@ -61,7 +61,7 @@ function ClockIcon() {
 
 export function BusinessTemplate({ business }: BusinessTemplateProps) {
   return (
-    <div className="business-page">
+    <div className="business-page barber-concept">
       <div className="concept-banner" role="note">
         <span className="concept-banner-mark">{business.conceptLabel}</span>
         <span>{business.conceptNotice}</span>

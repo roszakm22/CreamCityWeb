@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { BusinessTemplate } from "~/components/BusinessTemplate";
+import { LaundryConcept } from "~/components/LaundryConcept";
 import { mrCleanLaundromat } from "~/data/businesses";
 
 export const Route = createFileRoute("/previews/mr-clean")({
@@ -17,5 +17,5 @@ export const Route = createFileRoute("/previews/mr-clean")({
 });
 
 function MrCleanPreview() {
-  return <BusinessTemplate business={mrCleanLaundromat} />;
+  return <LaundryConcept business={mrCleanLaundromat} />;
 }
