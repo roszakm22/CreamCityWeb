@@ -39,6 +39,17 @@ function ScissorsIcon() {
   );
 }
 
+function LaundryIcon() {
+  return (
+    <svg aria-hidden="true" viewBox="0 0 24 24" className="icon icon-lg">
+      <rect x="5" y="3.5" width="14" height="17" rx="2" />
+      <circle cx="12" cy="13" r="4" />
+      <circle cx="8.5" cy="7.5" r="0.7" fill="currentColor" stroke="none" />
+      <circle cx="11.5" cy="7.5" r="0.7" fill="currentColor" stroke="none" />
+    </svg>
+  );
+}
+
 function ClockIcon() {
   return (
     <svg aria-hidden="true" viewBox="0 0 24 24" className="icon icon-sm">
@@ -63,10 +74,16 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
           aria-label={`${business.name} home`}
         >
           <span className="brand-mark" aria-hidden="true">
-            <ScissorsIcon />
+            {business.category === "Laundromat" ? (
+              <LaundryIcon />
+            ) : (
+              <ScissorsIcon />
+            )}
           </span>
           <span>
-            <span className="brand-name">{business.name}</span>
+            <span className="brand-name">
+              {business.displayName ?? business.name}
+            </span>
             <span className="brand-category">{business.category}</span>
           </span>
         </a>
@@ -81,15 +98,15 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
           <div className="hero-copy">
             <p className="eyebrow">{business.locationLabel}</p>
             <h1>
-              Look sharp.
+              {business.heroTitle}
               <br />
-              <em>Feel ready.</em>
+              <em>{business.heroEmphasis}</em>
             </h1>
             <p className="hero-tagline">{business.tagline}</p>
             <div className="hero-actions">
               <a className="button button-primary" href={business.phoneHref}>
                 <PhoneIcon />
-                Call the shop
+                {business.callLabel}
               </a>
               <a
                 className="button button-secondary"
@@ -111,28 +128,29 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
                     {business.booking.label}
                     <ArrowUpRightIcon />
                   </a>
-                  <p>Booking is handled by the shop&apos;s existing provider.</p>
+                  <p>
+                    Booking is handled by the shop&apos;s existing provider.
+                  </p>
                 </div>
               ) : null}
             </div>
-            <p className="walk-in-note">
-              <span className="pulse-dot" aria-hidden="true" />
-              {business.walkInLabel}
-            </p>
+            {business.walkInLabel ? (
+              <p className="walk-in-note">
+                <span className="pulse-dot" aria-hidden="true" />
+                {business.walkInLabel}
+              </p>
+            ) : null}
           </div>
-          <div
-            className="hero-art"
-            aria-label="Generic illustrative barber shop image"
-          >
+          <div className="hero-art" aria-label={business.heroImageAriaLabel}>
             <img src={business.gallery[0].src} alt={business.gallery[0].alt} />
             <div className="hero-art-label">
               <span>01</span>
-              <span>Crafted for your next cut</span>
+              <span>{business.heroImageLabel}</span>
             </div>
           </div>
         </section>
 
-        <section className="info-strip" aria-label="Shop contact details">
+        <section className="info-strip" aria-label="Business contact details">
           <div className="page-shell info-strip-inner">
             <div className="info-item">
               <span className="info-icon">
@@ -148,7 +166,7 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
                 <ClockIcon />
               </span>
               <div>
-                <span className="info-label">Today&apos;s rhythm</span>
+                <span className="info-label">Hours</span>
                 <span>{business.hoursSummary}</span>
               </div>
             </div>
@@ -165,25 +183,31 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
 
         <section className="services-section page-shell" id="services">
           <div className="section-intro">
-            <p className="eyebrow">The menu</p>
+            <p className="eyebrow">{business.servicesEyebrow}</p>
             <h2>
-              Good grooming,
+              {business.servicesTitle}
               <br />
-              <em>your way.</em>
+              <em>{business.servicesEmphasis}</em>
             </h2>
           </div>
           <div className="services-content">
-            <p className="section-lede">{business.servicesIntro}</p>
-            <ul className="service-list">
-              {business.services.map((service, index) => (
-                <li key={service}>
-                  <span className="service-number">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span>{service}</span>
-                </li>
-              ))}
-            </ul>
+            {business.services.length > 0 ? (
+              <>
+                <p className="section-lede">{business.servicesIntro}</p>
+                <ul className="service-list">
+                  {business.services.map((service, index) => (
+                    <li key={service}>
+                      <span className="service-number">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
+                      <span>{service}</span>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <p className="confirmation-note">{business.servicesIntro}</p>
+            )}
           </div>
         </section>
 
@@ -220,34 +244,40 @@ export function BusinessTemplate({ business }: BusinessTemplateProps) {
         <section className="hours-section page-shell" id="hours">
           <div className="hours-card">
             <div className="hours-heading">
-              <p className="eyebrow">Plan your visit</p>
+              <p className="eyebrow">{business.hoursEyebrow}</p>
               <h2>
-                Hours that are
+                {business.hoursTitle}
                 <br />
-                <em>easy to find.</em>
+                <em>{business.hoursEmphasis}</em>
               </h2>
             </div>
             <div className="hours-list" aria-label="Weekly hours">
-              {business.hours.map((item) => (
-                <div
-                  className={`hours-row${item.day === "Monday" ? " is-closed" : ""}`}
-                  key={item.day}
-                >
-                  <span>{item.day}</span>
-                  <span>{item.hours}</span>
-                </div>
-              ))}
-              <p className="hours-note">{business.hoursNote}</p>
+              {business.hours.length > 0 ? (
+                business.hours.map((item) => (
+                  <div
+                    className={`hours-row${item.day === "Monday" ? " is-closed" : ""}`}
+                    key={item.day}
+                  >
+                    <span>{item.day}</span>
+                    <span>{item.hours}</span>
+                  </div>
+                ))
+              ) : (
+                <p className="confirmation-note">{business.hoursNote}</p>
+              )}
+              {business.hours.length > 0 ? (
+                <p className="hours-note">{business.hoursNote}</p>
+              ) : null}
             </div>
           </div>
         </section>
 
         <section className="final-cta page-shell">
-          <p className="eyebrow">Ready when you are</p>
+          <p className="eyebrow">{business.finalEyebrow}</p>
           <h2>
-            Make time
+            {business.finalTitle}
             <br />
-            <em>to cut.</em>
+            <em>{business.finalEmphasis}</em>
           </h2>
           <a className="button button-primary" href={business.phoneHref}>
             <PhoneIcon />
