@@ -1348,3 +1348,803 @@ h2 em {
   .barber-concept .hero-art { min-height: 390px; }
   .barber-concept .gallery-section { padding: 80px 24px; }
 }
+
+/* Westwood Dry Cleaners concept — a separate visual identity from the other previews. */
+.westwood-page {
+  --westwood-ink: #18232c;
+  --westwood-blue: #315b70;
+  --westwood-sky: #dbe9e8;
+  --westwood-coral: #c96f59;
+  --westwood-paper: #f5f1e9;
+  --westwood-line: rgba(24, 35, 44, 0.2);
+  min-height: 100vh;
+  overflow: hidden;
+  background: var(--westwood-paper);
+  color: var(--westwood-ink);
+  font-family: "Avenir Next", Avenir, "Trebuchet MS", sans-serif;
+}
+
+.westwood-page a:focus-visible,
+.westwood-page button:focus-visible {
+  outline: 3px solid var(--westwood-coral);
+  outline-offset: 4px;
+}
+
+.westwood-notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 13px;
+  min-height: 44px;
+  padding: 10px 24px;
+  background: var(--westwood-ink);
+  color: #f9f6ef;
+  font-size: 11px;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.westwood-notice strong {
+  flex: none;
+  color: #f2b29d;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.westwood-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: min(1240px, calc(100% - 48px));
+  margin-inline: auto;
+  padding: 26px 0;
+}
+
+.westwood-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--westwood-ink);
+  text-decoration: none;
+}
+
+.westwood-brand strong,
+.westwood-brand small {
+  display: block;
+}
+
+.westwood-brand strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 19px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.westwood-brand small {
+  margin-top: 3px;
+  color: var(--westwood-blue);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.westwood-monogram {
+  display: grid;
+  width: 39px;
+  height: 39px;
+  place-items: center;
+  border: 1px solid var(--westwood-ink);
+  border-radius: 50%;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 21px;
+  font-style: italic;
+}
+
+.westwood-header-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--westwood-blue);
+  font-size: 12px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.westwood-icon {
+  display: block;
+  width: 17px;
+  height: 17px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.5;
+}
+
+.westwood-hero {
+  display: grid;
+  grid-template-columns: 45px minmax(0, 0.88fr) minmax(390px, 1.12fr);
+  gap: clamp(24px, 5vw, 84px);
+  width: min(1240px, calc(100% - 48px));
+  min-height: 650px;
+  margin-inline: auto;
+  padding: clamp(40px, 8vw, 110px) 0 clamp(80px, 10vw, 135px);
+}
+
+.westwood-rail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 4px;
+  border-right: 1px solid var(--westwood-line);
+  color: var(--westwood-blue);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+  writing-mode: vertical-rl;
+}
+
+.westwood-hero-copy {
+  align-self: center;
+  padding-bottom: 20px;
+}
+
+.westwood-eyebrow {
+  margin: 0 0 21px;
+  color: var(--westwood-coral);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.westwood-hero h1,
+.westwood-details h2,
+.westwood-final h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: -0.075em;
+  line-height: 0.9;
+}
+
+.westwood-hero h1 {
+  max-width: 470px;
+  font-size: clamp(67px, 8.7vw, 126px);
+}
+
+.westwood-page em {
+  color: var(--westwood-blue);
+  font-style: italic;
+}
+
+.westwood-lede {
+  max-width: 365px;
+  margin: 30px 0 0;
+  color: #59656a;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.westwood-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  margin-top: 33px;
+}
+
+.westwood-button {
+  display: inline-flex;
+  min-height: 49px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 18px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.westwood-button:hover {
+  transform: translateY(-2px);
+}
+
+.westwood-button-primary {
+  background: var(--westwood-coral);
+  color: #fffaf4;
+}
+
+.westwood-button-primary:hover {
+  background: #a95544;
+}
+
+.westwood-text-link {
+  color: var(--westwood-ink);
+  font-size: 12px;
+  font-weight: 900;
+  text-underline-offset: 5px;
+}
+
+.westwood-text-link span {
+  margin-left: 7px;
+  color: var(--westwood-coral);
+  font-size: 16px;
+}
+
+.westwood-hero-art {
+  position: relative;
+  min-height: 510px;
+  isolation: isolate;
+  background: var(--westwood-sky);
+}
+
+.westwood-art-grid {
+  position: absolute;
+  inset: 20px;
+  z-index: -1;
+  opacity: 0.45;
+  background-image: linear-gradient(rgba(49, 91, 112, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(49, 91, 112, 0.15) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.westwood-hero-art::before,
+.westwood-hero-art::after {
+  position: absolute;
+  content: "";
+}
+
+.westwood-hero-art::before {
+  top: 42px;
+  right: -25px;
+  bottom: -25px;
+  left: 42px;
+  z-index: -2;
+  border: 1px solid var(--westwood-coral);
+}
+
+.westwood-hero-art::after {
+  top: 47px;
+  left: 47px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: var(--westwood-coral);
+}
+
+.westwood-hanger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(61%, 310px);
+  aspect-ratio: 1.24;
+  transform: translate(-50%, -45%) rotate(-8deg);
+}
+
+.westwood-hanger-hook {
+  position: absolute;
+  top: -26%;
+  left: 43%;
+  width: 23%;
+  height: 48%;
+  border: 9px solid var(--westwood-ink);
+  border-bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+.westwood-hanger-body {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 77%;
+  border: 11px solid var(--westwood-ink);
+  border-top: 0;
+  clip-path: polygon(0 0, 50% 36%, 100% 0, 100% 15%, 50% 53%, 0 15%);
+}
+
+.westwood-art-tag {
+  position: absolute;
+  right: 12%;
+  bottom: 17%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 94px;
+  padding: 15px 14px 17px;
+  background: var(--westwood-paper);
+  box-shadow: 8px 8px 0 var(--westwood-coral);
+  transform: rotate(8deg);
+}
+
+.westwood-art-tag::before {
+  position: absolute;
+  top: 13px;
+  right: 13px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--westwood-blue);
+  border-radius: 50%;
+  content: "";
+}
+
+.westwood-art-tag span {
+  color: var(--westwood-blue);
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.westwood-art-tag strong {
+  color: var(--westwood-ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 35px;
+  font-weight: 400;
+}
+
+.westwood-hero-art p {
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  margin: 0;
+  color: var(--westwood-blue);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.westwood-contact-strip {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 25px max(24px, calc((100% - 1190px) / 2));
+  background: var(--westwood-ink);
+  color: #f8f4eb;
+}
+
+.westwood-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.westwood-contact-icon {
+  display: grid;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border: 1px solid rgba(248, 244, 235, 0.34);
+  border-radius: 50%;
+  color: #f2b29d;
+}
+
+.westwood-label {
+  display: block;
+  margin-bottom: 3px;
+  color: #8fb5c0;
+  font-size: 9px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.westwood-contact-item address {
+  font-style: normal;
+}
+
+.westwood-contact-item a,
+.westwood-map-link {
+  color: #f8f4eb;
+  text-decoration: none;
+}
+
+.westwood-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.westwood-map-link:hover,
+.westwood-contact-item a:hover {
+  color: #f2b29d;
+}
+
+.westwood-details {
+  display: grid;
+  grid-template-columns: minmax(250px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(50px, 10vw, 145px);
+  width: min(1190px, calc(100% - 48px));
+  margin-inline: auto;
+  padding: clamp(95px, 12vw, 155px) 0;
+}
+
+.westwood-details h2 {
+  font-size: clamp(48px, 6vw, 78px);
+}
+
+.westwood-section-intro > p:last-child {
+  max-width: 300px;
+  margin: 28px 0 0;
+  color: #59656a;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.westwood-confirm-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.westwood-confirm-card {
+  min-height: 310px;
+  padding: 25px;
+  border: 1px solid var(--westwood-line);
+  border-top: 5px solid var(--westwood-coral);
+  background: #fffdf8;
+}
+
+.westwood-confirm-card-dark {
+  border-top-color: #8fb5c0;
+  background: var(--westwood-blue);
+  color: #f8f4eb;
+}
+
+.westwood-card-index {
+  color: var(--westwood-coral);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+}
+
+.westwood-confirm-card-dark .westwood-card-index {
+  color: #b8d4d8;
+}
+
+.westwood-confirm-card h3 {
+  max-width: 190px;
+  margin: 78px 0 16px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 29px;
+  font-weight: 400;
+  letter-spacing: -0.055em;
+  line-height: 1;
+}
+
+.westwood-confirm-card p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.westwood-confirm-card small {
+  display: block;
+  margin-top: 17px;
+  color: #69777a;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.westwood-confirm-card-dark small {
+  color: #c3d4d5;
+}
+
+.westwood-note-section {
+  display: grid;
+  grid-template-columns: 0.75fr 1.25fr;
+  gap: clamp(50px, 10vw, 145px);
+  width: min(1190px, calc(100% - 48px));
+  margin-inline: auto;
+  padding: 0 0 clamp(100px, 12vw, 160px);
+}
+
+.westwood-note-mark {
+  color: var(--westwood-coral);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 150px;
+  line-height: 0.65;
+}
+
+.westwood-note-section blockquote {
+  max-width: 650px;
+  margin: 0;
+  color: var(--westwood-blue);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(31px, 4vw, 52px);
+  letter-spacing: -0.055em;
+  line-height: 1.04;
+}
+
+.westwood-note-caption {
+  max-width: 390px;
+  margin: 24px 0 0;
+  color: #697579;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+.westwood-final {
+  padding: clamp(95px, 12vw, 150px) 24px;
+  background: var(--westwood-coral);
+  color: #fffaf4;
+  text-align: center;
+}
+
+.westwood-final .westwood-eyebrow {
+  color: #ffe0d2;
+}
+
+.westwood-final h2 {
+  font-size: clamp(67px, 9vw, 124px);
+}
+
+.westwood-final em {
+  color: var(--westwood-ink);
+}
+
+.westwood-final-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 34px;
+}
+
+.westwood-button-light {
+  border-color: var(--westwood-ink);
+  color: var(--westwood-ink);
+}
+
+.westwood-button-light:hover {
+  background: rgba(24, 35, 44, 0.1);
+}
+
+.westwood-final-phone {
+  display: inline-flex;
+  min-height: 49px;
+  align-items: center;
+  padding: 13px 18px;
+  border: 1px solid rgba(255, 250, 244, 0.74);
+  color: #fffaf4;
+  font-size: 12px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.westwood-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  padding: 27px max(24px, calc((100% - 1190px) / 2));
+  background: var(--westwood-ink);
+  color: #f8f4eb;
+  font-size: 10px;
+  line-height: 1.6;
+}
+
+.westwood-footer div:last-child {
+  color: rgba(248, 244, 235, 0.65);
+  text-align: right;
+}
+
+.westwood-footer span,
+.westwood-footer strong {
+  display: block;
+}
+
+.westwood-footer strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.westwood-mobile-call {
+  display: none;
+}
+
+@media (max-width: 850px) {
+  .westwood-hero {
+    grid-template-columns: 26px minmax(0, 1fr) minmax(290px, 0.95fr);
+    gap: 22px;
+  }
+
+  .westwood-hero-art {
+    min-height: 460px;
+  }
+
+  .westwood-details,
+  .westwood-note-section {
+    gap: 55px;
+  }
+}
+
+@media (max-width: 700px) {
+  .westwood-notice {
+    display: block;
+    padding: 10px 16px;
+    text-align: left;
+  }
+
+  .westwood-notice strong {
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .westwood-header {
+    width: min(100% - 32px, 1240px);
+    padding: 20px 0;
+  }
+
+  .westwood-header-call span {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    white-space: nowrap;
+  }
+
+  .westwood-header-call {
+    width: 38px;
+    height: 38px;
+    justify-content: center;
+    border: 1px solid var(--westwood-line);
+    border-radius: 50%;
+  }
+
+  .westwood-hero {
+    grid-template-columns: 1fr;
+    width: min(100% - 32px, 1240px);
+    min-height: 0;
+    gap: 45px;
+    padding-top: 55px;
+    padding-bottom: 75px;
+  }
+
+  .westwood-rail {
+    display: none;
+  }
+
+  .westwood-hero-copy {
+    padding-bottom: 0;
+  }
+
+  .westwood-hero h1 {
+    font-size: clamp(64px, 18vw, 100px);
+  }
+
+  .westwood-lede {
+    margin-top: 25px;
+    font-size: 14px;
+  }
+
+  .westwood-actions {
+    align-items: stretch;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 27px;
+  }
+
+  .westwood-button {
+    width: 100%;
+  }
+
+  .westwood-text-link {
+    text-align: center;
+  }
+
+  .westwood-hero-art {
+    min-height: 112vw;
+    max-height: 490px;
+  }
+
+  .westwood-contact-strip {
+    grid-template-columns: 1fr;
+    gap: 19px;
+    padding: 27px 24px;
+  }
+
+  .westwood-map-link {
+    margin-left: 46px;
+  }
+
+  .westwood-details,
+  .westwood-note-section {
+    grid-template-columns: 1fr;
+    width: min(100% - 32px, 1190px);
+    gap: 43px;
+  }
+
+  .westwood-details {
+    padding-top: 85px;
+    padding-bottom: 95px;
+  }
+
+  .westwood-details h2 {
+    font-size: 55px;
+  }
+
+  .westwood-section-intro > p:last-child {
+    margin-top: 22px;
+  }
+
+  .westwood-note-mark {
+    font-size: 110px;
+  }
+
+  .westwood-note-section {
+    padding-bottom: 95px;
+  }
+
+  .westwood-footer {
+    flex-direction: column;
+    padding: 25px 24px 85px;
+  }
+
+  .westwood-footer div:last-child {
+    text-align: left;
+  }
+
+  .westwood-mobile-call {
+    position: fixed;
+    z-index: 10;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 52px;
+    border-radius: 4px;
+    background: var(--westwood-ink);
+    box-shadow: 0 8px 24px rgba(24, 35, 44, 0.24);
+    color: #fffaf4;
+    font-size: 13px;
+    font-weight: 900;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 460px) {
+  .westwood-brand strong {
+    font-size: 16px;
+  }
+
+  .westwood-monogram {
+    width: 35px;
+    height: 35px;
+    font-size: 18px;
+  }
+
+  .westwood-confirm-list {
+    grid-template-columns: 1fr;
+  }
+
+  .westwood-confirm-card {
+    min-height: 260px;
+  }
+
+  .westwood-confirm-card h3 {
+    margin-top: 58px;
+  }
+}
