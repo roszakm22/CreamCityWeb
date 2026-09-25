@@ -26,9 +26,9 @@ function PinIcon() {
 export function WestwoodConcept() {
   const phone = "(414) 774-2201";
   const phoneHref = "tel:+14147742201";
-  const address = "8731 W North Ave, Wauwatosa, WI 53172";
+  const address = "8731 W North Ave, Wauwatosa, WI 53226";
   const directionsHref =
-    "https://www.google.com/maps/dir/?api=1&destination=8731+W+North+Ave+Wauwatosa+WI+53172";
+    "https://www.google.com/maps/dir/?api=1&destination=8731+W+North+Ave+Wauwatosa+WI+53226";
 
   return (
     <div className="westwood-page">
@@ -61,12 +61,11 @@ export function WestwoodConcept() {
             <span>01</span>
           </div>
           <div className="westwood-hero-copy">
-            <p className="westwood-eyebrow">A neighborhood original</p>
-            <h1>Good care<br /><em>shows.</em></h1>
+            <p className="westwood-eyebrow">A clear starting point</p>
+            <h1>Information<br /><em>made clear.</em></h1>
             <p className="westwood-lede">
               A calm, considered home for the information customers need before
-              they stop by. Built around the details Westwood Dry Cleaners wants
-              to publish.
+              they stop by. Built around the details to confirm before launch.
             </p>
             <div className="westwood-actions">
               <a className="westwood-button westwood-button-primary" href={directionsHref} target="_blank" rel="noreferrer">
