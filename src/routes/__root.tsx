@@ -1,4 +1,4 @@
-import { HeadContent, Outlet, Scripts, createRootRoute } from "@tanstack/react-router";
+import { HeadContent, Outlet, createRootRoute } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 
 import appCss from "~/styles/app.css?url";
@@ -30,10 +30,7 @@ function RootDocument({ children }: { children: ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body>
-        {children}
-        <Scripts />
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
