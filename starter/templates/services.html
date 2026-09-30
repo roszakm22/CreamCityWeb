@@ -1,0 +1,68 @@
+<!-- starter-meta: {"path":"/services/","title":"BUSINESS_NAME | Services","description":"BUSINESS_DESCRIPTION","noindex":false} -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{pageDescription}}" />
+    <link rel="canonical" href="{{canonicalUrl}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{pageTitle}}" />
+    <meta property="og:description" content="{{pageDescription}}" />
+    <meta property="og:url" content="{{canonicalUrl}}" />
+    <meta property="og:site_name" content="{{businessName}}" />
+    {{robotsMeta}}
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="/">{{businessName}}</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/services/" aria-current="page">Services</a>
+          <a href="/contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <aside class="placeholder-notice" role="note">
+        PLACEHOLDER STARTER: replace this list and visual identity with the
+        customer's confirmed services.
+      </aside>
+      <section aria-labelledby="page-heading">
+        <p class="eyebrow">{{businessName}}</p>
+        <h1 id="page-heading">Services</h1>
+        <div class="cards">
+          <article class="card">
+            <h2>Service or offering</h2>
+            <p>
+              PLACEHOLDER: describe only what the business confirms it provides.
+            </p>
+          </article>
+          <article class="card">
+            <h2>Service or offering</h2>
+            <p>PLACEHOLDER: include useful details, not unsupported claims.</p>
+          </article>
+          <article class="card">
+            <h2>Service or offering</h2>
+            <p>PLACEHOLDER: add a third item or remove this card.</p>
+          </article>
+        </div>
+      </section>
+      <section class="contact-block" aria-labelledby="questions-heading">
+        <h2 id="questions-heading">Questions?</h2>
+        <p>
+          <a class="button" href="tel:{{phoneTel}}">Call {{phoneDisplay}}</a>
+        </p>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>{{businessName}}</span><a href="/contact/">Contact</a>
+      </div>
+    </footer>
+  </body>
+</html>

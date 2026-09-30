@@ -1,0 +1,7 @@
+{
+  "name": "BUSINESS_NAME",
+  "phone": "PHONE_NUMBER",
+  "address": "STREET_ADDRESS, CITY, STATE ZIP_CODE",
+  "description": "BUSINESS_DESCRIPTION",
+  "siteUrl": "https://www.example.com"
+}
