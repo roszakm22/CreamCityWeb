@@ -1,0 +1,55 @@
+<!-- starter-meta: {"path":"/contact/","title":"BUSINESS_NAME | Contact","description":"Contact BUSINESS_NAME by phone or get directions.","noindex":false} -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{pageTitle}}</title>
+    <meta name="description" content="{{pageDescription}}" />
+    <link rel="canonical" href="{{canonicalUrl}}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="{{pageTitle}}" />
+    <meta property="og:description" content="{{pageDescription}}" />
+    <meta property="og:url" content="{{canonicalUrl}}" />
+    <meta property="og:site_name" content="{{businessName}}" />
+    {{robotsMeta}}
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-name" href="/">{{businessName}}</a>
+        <nav class="site-nav" aria-label="Primary navigation">
+          <a href="/">Home</a>
+          <a href="/services/">Services</a>
+          <a href="/contact/" aria-current="page">Contact</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main-content" class="site-main">
+      <aside class="placeholder-notice" role="note">
+        PLACEHOLDER STARTER: confirm every business detail before publishing and
+        replace this look.
+      </aside>
+      <section aria-labelledby="page-heading">
+        <p class="eyebrow">{{businessName}}</p>
+        <h1 id="page-heading">Contact</h1>
+        <div class="contact-block">
+          <h2>Call</h2>
+          <p><a class="button" href="tel:{{phoneTel}}">{{phoneDisplay}}</a></p>
+          <h2>Find us</h2>
+          <address>{{businessAddress}}</address>
+          <p>
+            <a href="{{mapsUrl}}" rel="noopener">Get Google Maps directions</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <span>{{businessName}}</span><a href="/">Home</a>
+      </div>
+    </footer>
+  </body>
+</html>
